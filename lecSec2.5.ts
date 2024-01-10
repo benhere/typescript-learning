@@ -1,4 +1,3 @@
-
 // enum in TS
 
 enum Role {Admin = 6, Read_only = 101, Author = 112};
