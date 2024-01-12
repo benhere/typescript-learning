@@ -13,7 +13,7 @@
 
 # 'unknown' is bit more restrictive than any.
 
-# 'unknown' type is better than 'any' type because it makes sure that you are not allowed to do everything by you have some type checking.
+# 'unknown' type is better than 'any' type because it makes sure that you are not allowed to do everything by you and have some type checking.
 
 # difference between 'unknown' and 'any' type
 
@@ -95,5 +95,23 @@ let voidToNever: void = resultNever;
 
 # Section 3 - The Typescript Compiler and its configuration
 
+# use of command `tsc --init`
+
+# this command tells typescript that everything in the folder where we are running this command is managed by typescript and hence it will create a `tsconfig.json` file. This file is basically the indicator for typescript that the project in which this file lies and all sub folders of the current folder should be managed by typescript.
+
+# significance of  `lib` option in `tsconfig.json` file - It is the `lib` option that let us use DOM API in TS. `lib' option is further depend on `target` option. By default `lib` option is commented so that TS compiler assumes some default libraries i.e some default type definitions.
+
+# `sourceMap` option - this helps us with debugging and development. By using this option we can compile TS files in browser's source tab.
+
+# when we uncomment `sourceMap` to true, it will generate .map file which acts a bridge which is understood by modern browsers and developer tools.
+
+# Most often we use write TS codes in `src` folder and its corresponding compiled `js` file reside into `dist` folder.
 
 
+# By uncommenting `outDir` option , we can tell the TS compiler that where the compiled `js` file should be stored and that is `dist` folder.
+
+# when `"noImplicitAny": true,` --> this option ensures that we have to be clear about values we're working with in our code. In this case we don't give Typescript any information about type of data.
+
+# Note - If we declare variable of `any` type then TS compiler will not show any error in code and but in case of function declaration if we pass any parameter of `any` type then it show error in code. This is because TS is able to able  track the value we assign to variables.
+
+# By using Chrome extension from VS Code Editor and `sourceMap` option from tsconfig file we can debug TS code inside VS Code Editor.
