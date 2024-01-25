@@ -105,13 +105,25 @@ let voidToNever: void = resultNever;
 
 # when we uncomment `sourceMap` to true, it will generate .map file which acts a bridge which is understood by modern browsers and developer tools.
 
-# Most often we use write TS codes in `src` folder and its corresponding compiled `js` file reside into `dist` folder.
+# Most often we used to write TS codes in `src` folder and its corresponding compiled `js` file reside into `dist` folder.
 
 
 # By uncommenting `outDir` option , we can tell the TS compiler that where the compiled `js` file should be stored and that is `dist` folder.
 
 # when `"noImplicitAny": true,` --> this option ensures that we have to be clear about values we're working with in our code. In this case we don't give Typescript any information about type of data.
 
-# Note - If we declare variable of `any` type then TS compiler will not show any error in code and but in case of function declaration if we pass any parameter of `any` type then it show error in code. This is because TS is able to able  track the value we assign to variables.
+# Note - If we declare variable of `any` type then TS compiler will not show any error in code and but in case of function declaration if we pass any parameter of `any` type then it show error in code. This is because TS is able to track the value we assign to variables.
 
 # By using Chrome extension from VS Code Editor and `sourceMap` option from tsconfig file we can debug TS code inside VS Code Editor.
+
+# Section-4 : Next-generation Typescript and Javascript
+
+# `let` & `const` introduced a new concept called block scope which means variable or constant always available in the block in which you define it or any lower blocks. Both forced us to write cleaner code.
+
+#Note - default arguments in function have to be last in the list, if we try to assign default argument to first argument, we will run into issues. This is because default arguments are not skipped when we call a function. So, TS and JS do not look at the function definition and guess that you probably wanna skip the default argument and provide your value to the non-default one. Instead , it simply adheres to the order and hence we should set default arguments from the right.
+
+# Note - TypeScript compiles the JS code not just from TypeScript only features to Regular JS, but all of them from Modern JS to old JS. If tell TS to do so.
+
+# Section-5 : Classes & Interfaces
+
+# Vanilla JS private field syntax also does not use the 'private' and 'public' keywords.
