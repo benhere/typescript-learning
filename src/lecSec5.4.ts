@@ -1,14 +1,13 @@
 
-// Inheritance in TS
-
-class Department{
+// shorthand intialization in TS
+class Department3{
     private empArr: string[] = [];
 
-    constructor(private readonly id: string, public name: string){
+    constructor(private id: string, public name: string){
         // this.name = n;
     }
 
-    describe(this: Department){
+    describe(this: Department3){
         console.log(`Department (${this.id}): ${this.name}`);
     }
 
@@ -22,13 +21,13 @@ class Department{
     }
 }
 
-let d1 = new Department("Ac102", "User1");
-console.log(d1);
-d1.describe();
+let d3 = new Department3("Ac102", "User1");
+console.log(d3);
+d3.describe();
 
-d1.addEmployees("Max");
-d1.addEmployees("Peter");
+d3.addEmployees("Max");
+d3.addEmployees("Peter");
 
-d1.printEmpInfo();
+d3.printEmpInfo();
 
 

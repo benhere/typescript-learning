@@ -1,15 +1,15 @@
 
-// Inheritance in TS
-
-class Department{
+// public & private in TS
+class Department2{
+    name: string;
     private empArr: string[] = [];
 
-    constructor(private readonly id: string, public name: string){
-        // this.name = n;
+    constructor(n: string){
+        this.name = n;
     }
 
-    describe(this: Department){
-        console.log(`Department (${this.id}): ${this.name}`);
+    describe(this: Department2){
+        console.log('Department: '+this.name);
     }
 
     addEmployees(emp: string){
@@ -22,7 +22,7 @@ class Department{
     }
 }
 
-let d1 = new Department("Ac102", "User1");
+let d2 = new Department("Account");
 console.log(d1);
 d1.describe();
 
