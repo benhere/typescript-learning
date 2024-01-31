@@ -1,7 +1,7 @@
 
-//  TS
+// Abstract class in TS
 
-abstract class DepartmentDD{
+abstract class DepartmentCC{
     static fiscalYear = 2024;
     protected empArr: string[] = [];
 
@@ -13,7 +13,7 @@ abstract class DepartmentDD{
         return {name: name};
     }
 
-    abstract describe(this: DepartmentDD): void;
+    abstract describe(this: DepartmentCC): void;
 
     addEmployees(emp: string){
         this.empArr.push(emp);
@@ -25,7 +25,7 @@ abstract class DepartmentDD{
     }
 }
 
-class ITDepartment5 extends DepartmentDD{
+class ITDepartment4 extends DepartmentCC{
     admins: string[];
     constructor(id: string, admins: string[]){
         super(id, "IT");
@@ -37,7 +37,7 @@ class ITDepartment5 extends DepartmentDD{
     }
 }
 
-class AccountingDepartment5 extends DepartmentDD{
+class AccountingDepartment4 extends DepartmentCC{
     private lastReport: string;
 
     get mostRecentReport(){
@@ -80,32 +80,33 @@ class AccountingDepartment5 extends DepartmentDD{
     }
 }
 
-const emp3 = DepartmentDD.createEmp("Henary");
-console.log(emp3, DepartmentDD.fiscalYear);
+const emp2 = DepartmentCC.createEmp("Henary");
+console.log(emp2, DepartmentCC.fiscalYear);
 
 
-let itd5 = new ITDepartment5("Ac107", ["Peter", "Jack"]);
-console.log(itd5);
-itd5.describe();
+let itd4 = new ITDepartment4("Ac107", ["Peter", "Jack"]);
+console.log(itd4);
+itd4.describe();
 
-itd5.addEmployees("Max");
-itd5.addEmployees("Peter");
+itd4.addEmployees("Max");
+itd4.addEmployees("Peter");
 
-itd5.printEmpInfo();
+itd4.printEmpInfo();
 
-const accDept5 = new AccountingDepartment5('d6', []);
+const accDept4 = new AccountingDepartment4('d6', []);
 
-accDept5.mostRecentReport = "TS Dev Report";
-accDept5.addReport('TS Report');
-accDept5.addReport('Something went wrong...')
+accDept4.mostRecentReport = "TS Dev Report";
 
-console.log(accDept5.mostRecentReport);
+accDept4.addReport('TS Report');
+accDept4.addReport('Something went wrong...')
 
-accDept5.addEmployees('Peter');
-accDept5.addEmployees('TsDev');
+console.log(accDept4.mostRecentReport);
 
-// accDept5.printEmpInfo();
-// accDept5.printReports();
+accDept4.addEmployees('Peter');
+accDept4.addEmployees('TsDev');
 
-accDept5.describe();
+// accDept4.printEmpInfo();
+// accDept4.printReports();
+
+accDept4.describe();
 

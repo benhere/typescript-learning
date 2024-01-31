@@ -1,19 +1,16 @@
 
-//  TS
+// Getters & Setters in TS
 
-abstract class DepartmentDD{
-    static fiscalYear = 2024;
+class DepartmentA{
     protected empArr: string[] = [];
 
-    constructor(protected readonly id: string, public name: string){
+    constructor(private readonly id: string, public name: string){
         // this.name = n;
     }
 
-    static createEmp(name: string){
-        return {name: name};
+    describe(this: DepartmentA){
+        console.log(`Department (${this.id}): ${this.name}`);
     }
-
-    abstract describe(this: DepartmentDD): void;
 
     addEmployees(emp: string){
         this.empArr.push(emp);
@@ -25,19 +22,15 @@ abstract class DepartmentDD{
     }
 }
 
-class ITDepartment5 extends DepartmentDD{
+class ITDepartment2 extends DepartmentA{
     admins: string[];
     constructor(id: string, admins: string[]){
         super(id, "IT");
         this.admins = admins;
     }
-
-    describe() {
-        console.log('IT Department Id: ',this.id);
-    }
 }
 
-class AccountingDepartment5 extends DepartmentDD{
+class AccountingDepartment2 extends DepartmentA{
     private lastReport: string;
 
     get mostRecentReport(){
@@ -59,10 +52,6 @@ class AccountingDepartment5 extends DepartmentDD{
         this.lastReport = reports[0];
     }
 
-    describe(){
-        console.log('Accounting Dept Id: ',+this.id);
-    }
-
     addEmployees(name: string) {
         if(name === 'Peter'){
             return;
@@ -80,32 +69,27 @@ class AccountingDepartment5 extends DepartmentDD{
     }
 }
 
-const emp3 = DepartmentDD.createEmp("Henary");
-console.log(emp3, DepartmentDD.fiscalYear);
+let itd2 = new ITDepartment2("Ac102", ["Peter", "Jack"]);
+console.log(itd2);
+itd2.describe();
 
+itd2.addEmployees("Max");
+itd2.addEmployees("Peter");
 
-let itd5 = new ITDepartment5("Ac107", ["Peter", "Jack"]);
-console.log(itd5);
-itd5.describe();
+itd2.printEmpInfo();
 
-itd5.addEmployees("Max");
-itd5.addEmployees("Peter");
+const accDept2 = new AccountingDepartment2('d4', []);
 
-itd5.printEmpInfo();
+accDept2.mostRecentReport = "TS Dev Report";
 
-const accDept5 = new AccountingDepartment5('d6', []);
+accDept2.addReport('TS Report');
+accDept2.addReport('Something went wrong...')
 
-accDept5.mostRecentReport = "TS Dev Report";
-accDept5.addReport('TS Report');
-accDept5.addReport('Something went wrong...')
+console.log(accDept2.mostRecentReport);
 
-console.log(accDept5.mostRecentReport);
+accDept2.addEmployees('Peter');
+accDept2.addEmployees('TsDev');
 
-accDept5.addEmployees('Peter');
-accDept5.addEmployees('TsDev');
-
-// accDept5.printEmpInfo();
-// accDept5.printReports();
-
-accDept5.describe();
+accDept2.printEmpInfo();
+accDept2.printReports();
 
