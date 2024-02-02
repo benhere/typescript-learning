@@ -128,4 +128,26 @@ let voidToNever: void = resultNever;
 
 # Vanilla JS private field syntax also does not use the 'private' and 'public' keywords.
 
+# Singletons & Private Constrctors
+
+# There is a pattern in a object oriented programming which is called the singleton pattern which ensures that we should always have exactly one instance of a certain class. This can be useful in scenario where we somehow can't use static methods or properties or we don't want to but the same time we want to make sure that we can't create multiple objects based on a class but we always have exactly one object on a class.
+
+# Interface - An interface describes the structure of an object. We can use it to describe how an object should look like.
+
+# Interface allows us to define the structure of an object. We can use it as atype to type check for objects that must have this structure.
+
+# difference betweeen interface & type :-
+
+# One major difference is that interfaces can only be used to describe the strcture of an object, we can use 'type' alias for that as well but instead of custom type we can also store other things like union types and so on.
+
+# When we define something as an interface, it's super clear that we want to define the strcture of an object with that.
+
+# When it comes to define object types, we often see interfaces out there in the while then we see custom types.
+
+# Note - The reason why we often work with interface is that it can be used as a contract a class can implement and a class then has to adhere to.
+
+# Note - There is no translation for interfaces. Javascript doesn't know about this feature. It's pure TS feature that is only available during development and compilation.
+
+# Section-6 : Advanced Types
+
 # 
