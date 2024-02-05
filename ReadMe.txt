@@ -150,4 +150,20 @@ let voidToNever: void = resultNever;
 
 # Section-6 : Advanced Types
 
-# 
+# intersection types in TS allow us to combine other types.
+
+# In TS, type guard is just a term that describes the idea or approach of checking if a certain property or method exists before you try to use it.
+
+# Note - For objects, we use type guard using 'instanceof' or with 'in'. For other types, we can use typeof.
+
+# Descriminated Union :- It's pattern which we can use when working with union types that makes implementing type guards easier. It is available when we work with object types.
+
+# There are two ways of typecasting in TS
+
+1). using angular bracket (<>) to specify the types.
+
+2). using 'as' keyword 
+
+# '!' --> this exclamation mark allows us to tell TS that the expression in front of it will never yield null.
+
+# Index properties :- It is a feature that allows us to create objects which are more flexible regarding the properties they might hold.
