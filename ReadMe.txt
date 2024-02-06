@@ -167,3 +167,15 @@ let voidToNever: void = resultNever;
 # '!' --> this exclamation mark allows us to tell TS that the expression in front of it will never yield null.
 
 # Index properties :- It is a feature that allows us to create objects which are more flexible regarding the properties they might hold.
+
+# Nullish Coalescing (??) - It helps us deal with nullish (null) data.
+
+# Section-7 : Generics
+
+# A generic type is a type which is kind of connected with some other type and is really flexible regarding which exact type that other type is.
+
+# Example of Buit-in Generics - array, promise
+
+# Partial type - It wraps our own type and change it to type where all these properties are optional.
+
+# Note - Generic types are great if we want to lock in certain type. Use the same type throughout the entire class instance we create, use the same type throughout the entire function. That's where we want the generic type. We should use union type when we are flexible to have a different type with every method call, with every function call.
