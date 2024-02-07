@@ -179,3 +179,40 @@ let voidToNever: void = resultNever;
 # Partial type - It wraps our own type and change it to type where all these properties are optional.
 
 # Note - Generic types are great if we want to lock in certain type. Use the same type throughout the entire class instance we create, use the same type throughout the entire function. That's where we want the generic type. We should use union type when we are flexible to have a different type with every method call, with every function call.
+
+# Section-8 : Decorators
+
+# In TypeScript, decorators are a feature that allows you to add metadata or behavior to classes, methods, properties, or parameters in a concise and expressive way. Decorators are a form of metaprogramming, enabling you to modify the behavior of classes and their members at design time.
+
+# Decorators are prefixed with an `@` symbol and are applied to declarations using the following syntax:
+
+```typescript
+@decorator
+class MyClass {
+    @decorator
+    myMethod() {}
+
+    @decorator
+    myProperty: string;
+}
+```
+
+# Decorators can be used for various purposes, such as:
+
+1). **Annotation:** You can use decorators to add metadata to classes, methods, or properties. This metadata can be accessed and utilized at runtime or compile time for various purposes like validation, serialization, or dependency injection.
+
+2). **Aspect-Oriented Programming (AOP):** Decorators enable you to separate cross-cutting concerns such as logging, caching, or authorization from the main logic of your application. By applying decorators to methods or classes, you can add behavior to them without modifying their original code.
+
+3). **Dependency Injection (DI):** In frameworks like Angular, decorators are extensively used for dependency injection. You can mark classes or constructor parameters with decorators to indicate their dependencies, which are then resolved and injected by the framework.
+
+4). **Validation:** Decorators can be used to add validation logic to properties or methods. For example, you can create decorators to enforce data validation rules before executing a method or assigning a value to a property.
+
+5). **Memoization:** Decorators can be used to implement memoization, where the result of a function call is cached based on its arguments. Subsequent calls with the same arguments can then return the cached result instead of re-executing the function.
+
+# It's important to note that decorators are an experimental feature in JavaScript and TypeScript and are subject to change. They are currently part of the ECMAScript proposal and are widely used in TypeScript frameworks like Angular. However, their usage and behavior may evolve over time as the proposal progresses.
+
+# Decorators execute when your class is defined not when it is instantiated. We don't need to instantiate class at all. So, decorators run when JavaScript finds your class definition, your constructor definition and not when we use that constructor function to instantiate an object.
+
+# We can also define a decorator factory which basically returns a decorator function that allows us to configure it when we assign it as a decorator to something.
+
+# 
