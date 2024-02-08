@@ -215,4 +215,8 @@ class MyClass {
 
 # We can also define a decorator factory which basically returns a decorator function that allows us to configure it when we assign it as a decorator to something.
 
-# 
+# Decorator is just a function that executes when the class is defined, when the method therefore is registered.
+
+# Decorators are adding extra functionality behind the scenes which then sometimes can execute when you do something with your class or with your method, but which can also do totally different things.
+
+# More on Decorators: https://www.typescriptlang.org/docs/handbook/decorators.html
