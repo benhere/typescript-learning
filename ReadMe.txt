@@ -220,3 +220,5 @@ class MyClass {
 # Decorators are adding extra functionality behind the scenes which then sometimes can execute when you do something with your class or with your method, but which can also do totally different things.
 
 # More on Decorators: https://www.typescriptlang.org/docs/handbook/decorators.html
+
+# 
