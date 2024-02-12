@@ -221,4 +221,14 @@ class MyClass {
 
 # More on Decorators: https://www.typescriptlang.org/docs/handbook/decorators.html
 
-# abc
+# To write a modular code, we used to split our codes into multiple files, instead of storing it into single file so that each file on its own stays manageable and maintainable and then we simply import and export from and to these files to make sure that all these files are connected.
+
+# Two options to organize code in multiple files :-
+1). Namespace and File Bundling &
+2). ES6 Imports /Exports
+
+# Namespace - Namespace is a TS feature, syntax feature where we can add special code to our code to use this feature and it allow us to group code together below namespace and import namespaces into other files.
+
+# File Bundling - TS also bundle files together into one file so that we write code in multiple files (which are compiled) but they are then imported into each other so that we have less imports to manage.
+
+# We still have some diaadvantages of Namespace and ES6 Imports /Exports because every file we are depending on needs to be downloaded separately which means more HTTP requests and so on and there we can bundle files together and to work on multiple files during development but ship a single file for production but we need third party tools for this. For example - Webpack
