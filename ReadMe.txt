@@ -93,6 +93,13 @@ let resultNever: never = throwError("An error occurred"); // Valid
 let voidToNever: void = resultNever; 
 ```
 
+# Useful Resources & Links
+# Attached you find all the code snapshots for this module - you also find them attached to individual lectures throughout this module.
+
+# These links might also be interesting:
+
+# Official TypeScript Docs: https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+
 # Section 3 - The Typescript Compiler and its configuration
 
 # use of command `tsc --init`
@@ -115,6 +122,17 @@ let voidToNever: void = resultNever;
 # Note - If we declare variable of `any` type then TS compiler will not show any error in code and but in case of function declaration if we pass any parameter of `any` type then it show error in code. This is because TS is able to track the value we assign to variables.
 
 # By using Chrome extension from VS Code Editor and `sourceMap` option from tsconfig file we can debug TS code inside VS Code Editor.
+
+# Useful Resources & Links
+# Attached you find all the code snapshots for this module - you also find them attached to individual lectures throughout this module.
+
+# These links might also be interesting:
+
+# tsconfig Docs: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+
+# Compiler Config Docs: https://www.typescriptlang.org/docs/handbook/compiler-options.html
+
+# VS Code TS Debugging: https://code.visualstudio.com/docs/typescript/typescript-debugging
 
 # Section-4 : Next-generation Typescript and Javascript
 
@@ -148,6 +166,15 @@ let voidToNever: void = resultNever;
 
 # Note - There is no translation for interfaces. Javascript doesn't know about this feature. It's pure TS feature that is only available during development and compilation.
 
+# Useful Resources & Links
+# Attached you find all the code snapshots for this module - you also find them attached to individual lectures throughout this module.
+
+# These links might also be interesting:
+
+# More on (JS) Classes: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+
+# More on TS Interfaces: https://www.typescriptlang.org/docs/handbook/2/objects.html
+
 # Section-6 : Advanced Types
 
 # intersection types in TS allow us to combine other types.
@@ -170,6 +197,13 @@ let voidToNever: void = resultNever;
 
 # Nullish Coalescing (??) - It helps us deal with nullish (null) data.
 
+# Useful Resources & Links
+# Attached you find all the code snapshots for this module - you also find them attached to individual lectures throughout this module.
+
+# These links might also be interesting:
+
+# More on Advanced Types: https://www.typescriptlang.org/docs/handbook/2/types-from-types.html
+
 # Section-7 : Generics
 
 # A generic type is a type which is kind of connected with some other type and is really flexible regarding which exact type that other type is.
@@ -179,6 +213,13 @@ let voidToNever: void = resultNever;
 # Partial type - It wraps our own type and change it to type where all these properties are optional.
 
 # Note - Generic types are great if we want to lock in certain type. Use the same type throughout the entire class instance we create, use the same type throughout the entire function. That's where we want the generic type. We should use union type when we are flexible to have a different type with every method call, with every function call.
+
+# Useful Resources & Links
+# Attached you find all the code snapshots for this module - you also find them attached to individual lectures throughout this module.
+
+# These links might also be interesting:
+
+# More on Generics: https://www.typescriptlang.org/docs/handbook/generics.html
 
 # Section-8 : Decorators
 
@@ -232,3 +273,4 @@ class MyClass {
 # File Bundling - TS also bundle files together into one file so that we write code in multiple files (which are compiled) but they are then imported into each other so that we have less imports to manage.
 
 # We still have some diaadvantages of Namespace and ES6 Imports /Exports because every file we are depending on needs to be downloaded separately which means more HTTP requests and so on and there we can bundle files together and to work on multiple files during development but ship a single file for production but we need third party tools for this. For example - Webpack
+
