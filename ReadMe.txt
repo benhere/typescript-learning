@@ -274,3 +274,16 @@ class MyClass {
 
 # We still have some diaadvantages of Namespace and ES6 Imports /Exports because every file we are depending on needs to be downloaded separately which means more HTTP requests and so on and there we can bundle files together and to work on multiple files during development but ship a single file for production but we need third party tools for this. For example - Webpack
 
+# Note - If we are working with third party libraries in TS (like loadash which is written in JS ), we need to install '@types' package.
+
+# In TypeScript, a class transformer is a tool or library used to transform or manipulate TypeScript classes at runtime. These transformations could involve creating new classes, modifying existing ones, or applying decorators dynamically.
+
+# One popular library for class transformation in TypeScript is class-transformer. This library provides decorators to transform plain JavaScript objects into class instances and vice versa. It's commonly used when working with data serialization and deserialization, such as when handling JSON data in web applications.
+
+# Github link - https://github.com/typestack/class-transformer?tab=readme-ov-file#what-is-class-transformer
+
+# class-validator - It is a decorator-based property validation for classes. This package allow us to add validation rules with the help of some decorators inside of class
+
+# class-validator - https://github.com/typestack/class-validator?tab=readme-ov-file#class-validator
+
+
