@@ -286,4 +286,3 @@ class MyClass {
 
 # class-validator - https://github.com/typestack/class-validator?tab=readme-ov-file#class-validator
 
-
